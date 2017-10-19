@@ -10,7 +10,9 @@ PrettyTable>=0.6,<0.8
 # shade has a looser requirement on six than nodepool, so install six first
 six>=1.7.0
 os-client-config>=1.2.0
-shade>=1.21.0
+# we need two customizations for shade related to our deployment, and until
+# those land in mainline we have to fork it.
+-e git+https://github.com/codilime/shade.git#egg=shade
 diskimage-builder>=2.0.0
 voluptuous
 kazoo
